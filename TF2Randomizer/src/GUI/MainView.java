@@ -18,6 +18,7 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -72,14 +73,18 @@ public class MainView {
         JButton medicButton = new JButton("Medic");
         JButton spyButton = new JButton("Spy");
 
-        // Add action listeners to buttons
-
+        // Add action listeners to buttons for button panel
         // Info
         buttonPanel.add(infoButton);
         infoButton.setBackground(CustomColors.getCustomColor(216, 113, 50));
         infoButton.addActionListener(e -> {
+            JOptionPane.showMessageDialog(null,
+                    "This program will generate a loadout based on a class you selected. \nWeapon reskins that does not bring any gameplay significance will not be included. \n1/2",
+                    "Information", 3);
+
             JOptionPane.showMessageDialog(frame,
-                    "This program will generate a loadout based on a class you selected. \nWeapon reskins that does not bring any gameplay significance will not be included.");
+                    "This Java application is developed by Zaid 'Ibbie' Ibrahim. \nUSN, Campus Vestfold - 2023 \n2/2",
+                    "Information", 3);
         });
 
         // Scout
@@ -175,7 +180,6 @@ public class MainView {
 
         // Create GUI layout for loadout
         JLabel headerLabel = new JLabel("TF2 Loadout Generator (Now in Java!)", SwingConstants.CENTER);
-
         Font headerFont = new Font("Arial", Font.ITALIC, 32);
         headerLabel.setFont(headerFont);
 
@@ -317,7 +321,7 @@ public class MainView {
             classLabel.setText("Selected Class: Huntsman Sniper");
         }
 
-        // Change to Soldier to Huntsman Trolldier when equipped with the Rocket Jumper,
+        // Change to Soldier to Trolldier when equipped with the Rocket Jumper,
         // BASE Jumper or Mantreads and Market Gardener
         if (className.equals("Soldier") &&
                 primarySlot.equals("Rocket Jumper") &&

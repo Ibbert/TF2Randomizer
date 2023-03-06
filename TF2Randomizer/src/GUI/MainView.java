@@ -338,7 +338,6 @@ public class MainView {
                 (secondarySlot.equals("Sandvich") ||
                         secondarySlot.equals("Dalokohs Bar") ||
                         secondarySlot.equals("Buffalo Steak Sandvich") ||
-                        secondarySlot.equals("Buffalo Steak Sandvich") ||
                         secondarySlot.equals("Second Banana"))) {
 
             secondaryLabel.setText("Lunch: " + secondarySlot);

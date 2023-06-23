@@ -83,7 +83,7 @@ public class MainView {
                     "Information", 3);
 
             JOptionPane.showMessageDialog(frame,
-                    "This Java application is developed by Zaid 'Ibbie' Ibrahim. \nUSN, Campus Vestfold - 2023 \n2/2",
+                    "This Java application is developed by Zaid Ibrahim. \nUSN, Campus Vestfold - 2022 \n2/2",
                     "Information", 3);
         });
 
